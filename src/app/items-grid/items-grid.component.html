@@ -1,0 +1,23 @@
+<mat-grid-list
+    class="grid-list"
+    [cols]="breakpoint"
+    rowHeight="600"
+    (window:resize)="onResize($event)"
+    >
+    <!-- <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
+    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile> -->
+
+    <mat-grid-tile *ngFor="let item of dogs; let i = index"><app-item-card [title]="item"></app-item-card></mat-grid-tile>
+  </mat-grid-list>
