@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ItemCardComponent } from '../item-card/item-card.component';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-items-grid',
   standalone: true,
-  imports: [MatGridListModule, ItemCardComponent, CommonModule],
+  imports: [MatGridListModule, ItemCardComponent],
   templateUrl: './items-grid.component.html',
   styleUrl: './items-grid.component.css'
 

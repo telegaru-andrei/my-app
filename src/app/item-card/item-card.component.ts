@@ -11,5 +11,5 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class ItemCardComponent {
 
-  @Input() title: string = "";
+  @Input() testTitlu1: string = "";
 }
