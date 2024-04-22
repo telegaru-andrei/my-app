@@ -1,17 +1,17 @@
 <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-stroked-button class="example-icon favorite-icon" >
-      Users
-    </button>
-    <button mat-stroked-button>
-      Items
-    </button>
-    <button mat-stroked-button> 
-        Cart
-    </button>
-  </mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-stroked-button class="example-icon favorite-icon" (click)="gotoUsers()">
+    Users
+  </button>
+  <button mat-stroked-button (click)="gotoItems()">
+    Items
+  </button>
+  <button mat-stroked-button>
+    Cart
+  </button>
+</mat-toolbar>
   

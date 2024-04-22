@@ -1,26 +1,16 @@
-<mat-grid-list
-    class="grid-list"
-    [cols]="breakpoint"
-    rowHeight="600"
-    (window:resize)="onResize($event)"
-    >
-    <!-- <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile>
-    <mat-grid-tile><app-item-card></app-item-card></mat-grid-tile> -->
+<mat-grid-list class="grid-list" [cols]="breakpoint" rowHeight="600" (window:resize)="onResize($event)">
 
-    @for (item of dogs; track item; let i = $index) {
-    <mat-grid-tile><app-item-card [testTitlu1]="item"></app-item-card></mat-grid-tile>
-    }
-  </mat-grid-list>
+
+  @for (item of items; track item; let i = $index) {
+  <mat-grid-tile>
+    <app-item-card 
+      [name]="item.name" 
+      [description]="item.description" 
+      [price]="item.price" 
+      [quantity]="item.quantity" 
+      [url]="item.url">
+    </app-item-card>
+  </mat-grid-tile>
+  }
+</mat-grid-list>
   <!-- *ngFor="let item of dogs; let i = index" -->
