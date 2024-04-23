@@ -43,11 +43,6 @@ export class UsersComponent implements OnInit{
   constructor(private usersService: UsersService, private dialog: MatDialog){}
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id: number): void {
-    // this.dialog.open(DeleteUserDialogComponent, {
-    //   width: '250px',
-    //   enterAnimationDuration,
-    //   exitAnimationDuration,
-    // }).afterClosed().subscribe(result => console.log(result));
 
     const dialogRef = this.dialog.open(DeleteUserDialogComponent, {
       width: '250px',
@@ -59,7 +54,6 @@ export class UsersComponent implements OnInit{
       if(result == true) {
         this.deleteUser(id);
       }
-
     });
   }
 }
