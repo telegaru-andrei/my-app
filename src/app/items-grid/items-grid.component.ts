@@ -17,6 +17,7 @@ export class ItemsGridComponent implements OnInit {
   breakpoint: number = 3;
   items: Item[] = [];
   defaultImage = "https://hips.hearstapps.com/hmg-prod/images/dw-burnett-pcoty22-8260-1671143390.jpg?crop=0.867xw:0.651xh;0.0417xw,0.190xh&resize=1200:*";
+  defaultImage2 = "https://github.com/chihaiadragos/my-app/blob/master/src/app/items-grid/assets/poza.PNG";
   
   ngOnInit() {
     this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
@@ -25,10 +26,10 @@ export class ItemsGridComponent implements OnInit {
       this.items = data;
       this.items.forEach((element) => {
         if (element.url && (!element.url.includes("jpg") && !element.url.includes(".png") && !element.url.includes(".jpeg"))) {
-          element.url = this.defaultImage;
+          element.url = this.defaultImage2;
         }
         if (!element.url) {
-          element.url = this.defaultImage;
+          element.url = this.defaultImage2;
         }
       })
     });
