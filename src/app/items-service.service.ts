@@ -23,7 +23,8 @@ export class ItemsService {
     return this.http.get<Item[]>(this.url);
   }
 
-  // public get2() {
-  //   return 2; //instant operation
-  // }
+  public saveItem(item: Item) {
+    return this.http.post<Item>(this.url, item);
+  }
+
 }

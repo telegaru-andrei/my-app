@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { DeleteUserDialogComponent } from '../delete-user-dialog/delete-user-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-users',
@@ -38,5 +40,20 @@ export class UsersComponent implements OnInit{
     });
   }
   
-  constructor(private usersService: UsersService){}
+  constructor(private usersService: UsersService, private dialog: MatDialog){}
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id: number): void {
+
+    const dialogRef = this.dialog.open(DeleteUserDialogComponent, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result == true) {
+        this.deleteUser(id);
+      }
+    });
+  }
 }
